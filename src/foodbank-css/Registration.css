@@ -1,0 +1,299 @@
+:root {
+    --white: #ffffff;
+  
+    --grey: #f5f5f5;
+    --grey2: #c7c7c7;
+    --grey3: #9f9f9f;
+
+    --dark-grey: #747474;
+  
+    --main-green: #008B50;
+  
+    --fade-green: #ccf2e2;
+    --pinkish: #ffdddd;
+    --red: #ff0000;
+
+    --black: #000;
+}
+
+/* General styling */
+
+.reg-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-bg-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fade-green);
+    width: 40%;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    min-width: 350px;
+}.side-bg-registration img {
+    width: 180px;
+    height: fit-content;
+    max-width: 180px;
+    max-height: fit-content;
+}
+
+.reg-form-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+.reg-logo {
+    width: 40px;
+    height: fit-content;
+    max-width: 40px;
+    max-height: fit-content;
+    margin-bottom: 10px;
+}
+
+.regristration-descriptive-text {
+    color: var(--dark-grey);
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.4;
+    margin-top: 5px;
+}.regristration-descriptive-text span {
+    color: var(--main-green);
+    font-weight: bold;
+}
+
+/* registration set up profile */
+
+.registration-form {
+    margin-top: 20px;
+    width: 50%;
+    min-width: 320px;
+    /* max-width: ; */
+}
+
+.registration-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.registration-form input {
+    width: 100%;
+    border: 1.5px solid var(--grey2);
+    background-color: var(--grey);
+    height: 45px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.registration-form select {
+    width: 100%;
+    border: 1.5px solid var(--grey2);
+    background-color: var(--grey);
+    height: 45px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.reg-setup-section {
+    margin-bottom: 10px;
+}
+
+.reg-password-space {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1.5px solid var(--grey2);
+    border-radius: 10px;
+    background-color: var(--grey);
+    height: 45px;
+    padding: 0 15px 0 5px;
+}
+.reg-password-space input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    padding: 5px;
+}
+
+.reg-forgot-pd {
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    color: var(--black);
+    font-size: .9rem
+}
+
+.reg-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border: 2px solid var(--main-green);
+    border-radius: 10px;
+    background-color: var(--main-green);
+    font-size: 1.1rem;
+    color: var(--white);
+    transition: .5s;
+}.reg-form-btn:hover {
+    color: var(--main-green);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.reg-form-sign-space {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-size: .9rem;
+}
+.reg-form-sign-space a {
+    display: block;
+    color: var(--main-green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.reg-eye-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.reg-eye-icon::after {
+    content: "";
+    width: 2px;
+    height: 20px;
+    position: absolute;
+    transform: rotate(40deg);
+    background-color: var(--grey3);
+}
+
+/* registration otp verification */
+
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.otp-inputs input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.rfb-otp {
+    margin-top: 10px;
+}
+
+.verification-modal-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #7474746c;
+    z-index: 9;
+    overflow-y: scroll;
+}
+
+.otp-verification-modal {
+    width: 300px;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.otp-check-pic {
+    display: block;
+    width: 70px;
+    height: fit-content;
+    max-width: 70px;
+    max-height: fit-content;
+    margin: 0px auto 15px auto;
+}
+.otp-verification-modal h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.otp-verification-modal p {
+    font-size: .8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--dark-grey);
+}
+.otp-verification-modal a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 35px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--white);
+    border: 2px solid var(--main-green);
+    border-radius: 5px;
+    background-color: var(--main-green);
+}
+.otp-verification-modal a:hover {
+    color: var(--main-green);
+    background-color: var(--white);
+}
+
+.password-criteria {
+    color: var(--dark-grey);
+    font-size: .8rem;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+    /* body{
+        background-color: red;
+    } */
+    .side-bg-registration {
+        display: none;
+    }
+
+    .reg-form-space {
+        width: 100%;
+        padding: 20px 10px 50px 10px;
+    }
+}
+
